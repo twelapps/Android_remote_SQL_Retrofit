@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.example.twelker.reminderdemo"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+//DONE to watch 9: add json-simple lib
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.googlecode.json-simple:json-simple:1.1'
+    testCompile 'junit:junit:4.12'
+//    TODO to watch: add Retrofit library
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'// For the retrofit
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'// For the JSON converter
+// For Retrofit logging
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+}

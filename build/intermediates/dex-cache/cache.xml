@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/twelh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.9.1/36e71ab9e903fc4d1b4a58d80572a91d9fd60caf/logging-interceptor-3.9.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="36e71ab9e903fc4d1b4a58d80572a91d9fd60caf">
+        <dex dex="/Users/twelh/Documents/Mobile Infrastructure/MIS-17-18-blok4/Week4-jax_rs_and_servlets/ReminderDemo_week4_remote_sql_retrofit/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.9.1_dd14c70009c39511aa3bd909006d0e85b16b3541/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/twelh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.9.1/84b4b7d1c4a238e7899972b7446c250691e65f1f/okhttp-3.9.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="84b4b7d1c4a238e7899972b7446c250691e65f1f">
+        <dex dex="/Users/twelh/Documents/Mobile Infrastructure/MIS-17-18-blok4/Week4-jax_rs_and_servlets/ReminderDemo_week4_remote_sql_retrofit/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.9.1_93d88737c2ea5fbb30519c634eabfdd918411780/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/twelh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/twelh/Documents/Mobile Infrastructure/MIS-17-18-blok4/Week4-jax_rs_and_servlets/ReminderDemo_week4_remote_sql_retrofit/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.13.0_16d43792d2295d9883edb28730887a5409ca57b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/twelh/Documents/Mobile Infrastructure/MIS-17-18-blok4/Week4-jax_rs_and_servlets/ReminderDemo_week4_remote_sql_retrofit/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9f6b726cafbd9af54545b23a5f5647534c6b4879">
+        <dex dex="/Users/twelh/Documents/Mobile Infrastructure/MIS-17-18-blok4/Week4-jax_rs_and_servlets/ReminderDemo_week4_remote_sql_retrofit/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_eb2bd4fcb67c22034577c32b52cd3637050061e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/twelh/Documents/Mobile Infrastructure/MIS-17-18-blok4/Week4-jax_rs_and_servlets/ReminderDemo_week4_remote_sql_retrofit/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/twelh/Documents/Mobile Infrastructure/MIS-17-18-blok4/Week4-jax_rs_and_servlets/ReminderDemo_week4_remote_sql_retrofit/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_59219a96c1b8452656620ff2298de12916e6b774/classes.dex" />
+    </item>
+
+</items>
