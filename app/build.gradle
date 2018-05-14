@@ -31,7 +31,7 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.googlecode.json-simple:json-simple:1.1'
     testCompile 'junit:junit:4.12'
-//    TODO to watch: add Retrofit library
+//    TODO to watch 1: add Retrofit library
     compile 'com.squareup.retrofit2:retrofit:2.1.0'// For the retrofit
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'// For the JSON converter
 // For Retrofit logging

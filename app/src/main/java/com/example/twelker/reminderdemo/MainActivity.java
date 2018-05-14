@@ -69,12 +69,11 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView mRecyclerView;
     private EditText mNewReminderText;
 
-    //TODO to watch: class variables for use with Retrofit
+    //TODO to watch 4: class variables for use with Retrofit
     private Retrofit mRetrofit;
     private Api mApi;
-//    private Call<List<Reminder>> mCallGet; //Expected result: array of reminders
-    private Call<ArrayList<Reminder>> mCallGet; //Expected result: array of reminders
     private Call<Void> mCallPost; //Expected result: empty data
+    private Call<ArrayList<Reminder>> mCallGet; //Expected result: array of reminders
 
     private LocationManager mLocationManager;
 
@@ -84,8 +83,9 @@ public class MainActivity extends AppCompatActivity
     //Constants used when calling the detail activity
     public static final String INTENT_DETAIL_ROW_NUMBER = "Row number";
 
-    //DONE to watch 6: use the local IP address, not "localhost" (may have a different meaning on different devices).
-    final String MY_URL_STRING = "http://192.168.178.61:8888/";
+    //TODO to watch 6: use the local IP address, not "localhost" (may have a different meaning on different devices).
+    final String MY_URL_STRING = "http://145.28.159.120:8888/";
+
     final int TIME_INTERVAL = 30000; //Milliseconds
 
     @Override
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
 
         getSupportLoaderManager().initLoader(0, null, this);
 
-        //TODO to watch: initiate Retrofit related class variables
+        //TODO to watch 5: initiate Retrofit related class variables
         //https://stackoverflow.com/questions/39918814/use-jsonreader-setlenienttrue-to-accept-malformed-json-at-line-1-column-1-path
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
-                //TODO to watch: read reminders from sql db using Retrofit client
+                //TODO to watch 8: read reminders from sql db using Retrofit client
                 /************************************************************************
                  * Get reminders with lat/lon/time from an SQL database using Retrofit
                  ************************************************************************/
@@ -369,29 +369,23 @@ and uses callbacks to signal when a user is performing these actions.
 //        //And execute it
 //        task.execute(new String[] { data });
 
-        //TODO to watch: add reminder to sql using Retrofit client
+        //TODO to watch 7: add reminder to sql using Retrofit client
         /************************************************************************
          * Add the reminder with lat/lon/time to an SQL database using Retrofit
          ************************************************************************/
-//        Reminder reminder = new Reminder(data);
-        mCallPost = mApi.saveReminder(/*reminder*/data);
-      //  mCallPost.enqueue(new Callback<Reminder>() {
+        mCallPost = mApi.saveReminder(data);
         mCallPost.enqueue(new Callback<Void>() {
 
             @Override
-      //      public void onResponse(Call<Reminder> call, Response<Reminder> response) {
             public void onResponse(Call<Void> call, Response<Void> response) {
-      //                  Log.d("MainActivity", " onLocationChanged - SQL - success\nMessage: " + response.message());
                 Log.d("MainActivity", " onLocationChanged - SQL - success");
             }
 
             @Override
-     //       public void onFailure(Call<Reminder> call, Throwable t) {
             public void onFailure(Call<Void> call, Throwable t) {
                 Log.d("MainActivity", " onLocationChanged - SQL - fail\nMessage: " + t.getMessage());
             }
         });
-
     }
 
     //DONE to watch 2: create the task "AddReminderToRemoteSql" that submits a POST request to the remote server.
@@ -551,14 +545,15 @@ and uses callbacks to signal when a user is performing these actions.
 //        }
 //    }
 
-    //TODO to watch: define the Retrofit API
+    //TODO to watch 3: define the Retrofit API
+    // https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/FormUrlEncoded.html
     public interface Api {
         @POST("/index.php")
 
         //@Field can only be used together with form encoding; @Body must do without.
         @FormUrlEncoded
-//        Call <Void> saveReminder (@Body Reminder reminder);
         Call<Void> saveReminder (@Field("name") String reminderData);
+        //Call <Void> saveReminder (@Body Reminder reminder);
 
         @GET("/index.php")
         Call<ArrayList<Reminder>> getReminders ();

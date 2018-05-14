@@ -7,7 +7,8 @@ import com.google.gson.annotations.SerializedName;
  * Created by twelh on 25/04/2018.
  */
 
-//TODO to watch: Reminder helper class, used by Retrofit client
+//TODO to watch 2: Reminder helper class, used by Retrofit client
+// https://stackoverflow.com/questions/28957285/what-is-the-basic-purpose-of-serializedname-annotation-in-android-using-gson
 public class Reminder {
     @SerializedName("_id")
     @Expose
